@@ -123,8 +123,8 @@
 
 <script>
 import { Message } from 'element-ui'
-import UploadExcelComponent from '../../components/Import/'
-import CallTask from '../../components/CallTasks/'
+import UploadExcelComponent from '../../components/Import/index'
+import CallTask from '../../components/CallTasks/index'
 import { addCallTasks } from '../../api/call_tasks'
 
 const taskInfo = {

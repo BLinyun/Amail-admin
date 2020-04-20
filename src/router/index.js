@@ -55,23 +55,35 @@ export const constantRoutes = [
   },
 
   {
-    path: '/seat',
+    path: '/data',
     component: Layout,
-    redirect: '/seat/smart_call',
-    name: 'Example',
-    meta: { title: '智能坐席', icon: 'example' },
+    redirect: '/data',
+    name: 'Data',
+    meta: { title: '数据管理', icon: 'example' },
     children: [
       {
-        path: 'smart_call',
-        name: 'smart_call',
-        component: () => import('@/views/seat/smart_call'),
-        meta: { title: '智能外呼任务', icon: 'table' }
+        path: 'category',
+        name: 'Category',
+        component: () => import('@/views/data/category'),
+        meta: { title: '分类管理', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'ad',
+        name: 'Ad',
+        component: () => import('@/views/data/ad'),
+        meta: { title: '广告管理', icon: 'tree' }
+      },
+      {
+        path: 'sentence',
+        name: 'Sentence',
+        component: () => import('@/views/data/sentence'),
+        meta: { title: '句子管理', icon: 'form' }
+      },
+      {
+        path: 'user',
+        name: 'User',
+        component: () => import('@/views/data/user'),
+        meta: { title: '用户管理', icon: 'user' }
       }
     ]
   },
